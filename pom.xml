@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Versión de XML y codificación -->
+<!-- Namespaces y Versión del esquema de Maven -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!-- Versión del Modelo Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identifica la organización -->
+    <groupId>org.santander.bigdata</groupId>
+    <!-- Nombre del artefacto software -->
+    <artifactId>ejemplos</artifactId>
+    <!-- Versión actual del proyecto -->
+    <version>1.0.0-SNAPSHOT</version>
+
+    <!-- Nombre del proyecto -->
+    <name>Ejemplos</name>
+
+    <!-- Declaración de propiedades -->
+    <properties>
+        <!-- Versión de Java -->
+        <java.version>1.8</java.version>
+        <!-- Codificación de los ficheros fuente -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Librerías externas -->
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-auth</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.6.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Plugin para compilar Java -->
+    <build>
+        <plugins>
+            <plugin>
+                <!-- Id del artefacto software del plugin -->
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- Versión del plugin -->
+                <version>3.6.1</version>
+                <!-- Configuración del plugin -->
+                <configuration>
+                    <!-- Utilizamos los valores definidos en las propiedades -->
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
